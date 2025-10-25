@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الدرس 7: العمليات المنطقية في C++</title>
+  <link rel="stylesheet" href="/style2.css" />
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="prev"><a class="chapter" href="/Third_Level/lesson6.html">&laquo;عودة</a>
+    <a class="chapter" href="/Third_Level/lesson8.html">التالي&raquo;</a></div>
+  <header>
+    <h1>⚙️ الدرس 7: العمليات المنطقية (Logical Operators)</h1>
+    <p>تعلم كيف تجعل برنامجك يتخذ قرارات ذكية.</p>
+  </header>
+
+  <section>
+    <h2>🔹 مقدمة</h2>
+    <p>
+      في البرامج الحقيقية، نحتاج أحيانًا إلى اتخاذ قرارات:  
+      "هل المستخدم فوق 18 سنة؟" أو "هل كلمة المرور صحيحة؟".  
+      هذه القرارات تعتمد على <strong>العمليات المنطقية</strong> التي تُعيد
+      إما <code>true</code> (صحيح) أو <code>false</code> (خطأ).
+    </p>
+  </section>
+
+  <section>
+    <h2>🔹 رموز العمليات المنطقية</h2>
+    <table>
+      <thead>
+        <tr><th>العامل</th><th>الوصف</th><th>المثال</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&&</code></td><td>AND (و)</td><td><code>(a > 5 && b < 10)</code></td></tr>
+        <tr><td><code>||</code></td><td>OR (أو)</td><td><code>(x == 0 || y == 0)</code></td></tr>
+        <tr><td><code>!</code></td><td>NOT (نفي)</td><td><code>!(a == b)</code></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 مثال 1: فحص العمر</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age;
+    cout &lt;&lt; "أدخل عمرك: ";
+    cin &gt;&gt; age;
+
+    if (age &gt;= 18 && age &lt;= 60)
+        cout &lt;&lt; "مسموح لك بالدخول." &lt;&lt; endl;
+    else
+        cout &lt;&lt; "غير مسموح، يجب أن يكون عمرك بين 18 و60." &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+    <h3>🔸 النتيجة:</h3>
+    <pre><code>أدخل عمرك: 25
+مسموح لك بالدخول.</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 مثال 2: استخدام OR (أو)</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    bool isAdmin = false;
+    bool hasPass = true;
+
+    if (isAdmin || hasPass)
+        cout &lt;&lt; "تم السماح بالدخول للنظام." &lt;&lt; endl;
+    else
+        cout &lt;&lt; "الدخول مرفوض!" &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+    <h3>🔸 النتيجة:</h3>
+    <pre><code>تم السماح بالدخول للنظام.</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 مثال 3: استخدام NOT (نفي الشرط)</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    bool loggedIn = false;
+
+    if (!loggedIn)
+        cout &lt;&lt; "الرجاء تسجيل الدخول أولاً." &lt;&lt; endl;
+    else
+        cout &lt;&lt; "مرحبًا بك!" &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+    <h3>🔸 النتيجة:</h3>
+    <pre><code>الرجاء تسجيل الدخول أولاً.</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 ملاحظات مهمة</h2>
+    <ul>
+      <li>العمليات المنطقية تُستخدم عادة داخل الجمل الشرطية <code>if</code>.</li>
+      <li>القيمة <code>true</code> تمثل "صحيح" و <code>false</code> تمثل "خطأ".</li>
+      <li>الرموز <code>&&</code> و <code>||</code> تُنفذ بطريقة مختصرة (Short-circuit Evaluation).</li>
+    </ul>
+  </section>
+<footer>
+<div id="footerB"></div>
+</footer>
+
+  <script>// تحميل الترويسة من الملف الخارجي وإدراجها
+  fetch('/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav').innerHTML = data;
+    });
+      fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerB').innerHTML = data;
+    });</script>
+    <script src="/script.js"></script>
+</body>
+</html>

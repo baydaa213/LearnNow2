@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="موقع تعليمي لتعلم أساسيات البرمجة بطريقة مبسطة للمبتدئين.">
+  <meta name="keywords" content="تعلم البرمجة ,تعليم , learn now 🔥,learn now, مقدمة برمجة ,موقع تعليمي , برمجة للمبتدئين ">
+  <title> صفحة البداية </title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="nav"></div>
+
+  <h3 class="title" align="center" >Learn programming now🔥</h3>
+  
+  <img src="/photos/firstPage.jpg" alt="error">
+  <div class="start">
+    <p>نحن هنا لنساعدك في إجتياز أول خطوة لك في عالم البرمجة.
+      هل أنت مستعد؟
+      
+      👇
+    </p>
+    <a href="/go_to_level.html" ><button class="btn">ابدأ!</button></a>
+  </div>
+  <footer>
+  <div id="footerB"></div>
+</footer>
+  <script>
+    // تحميل الترويسة من الملف الخارجي وإدراجها
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav').innerHTML = data;
+      });
+fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerB').innerHTML = data;
+    });
+  </script>
+</body>
+ </html>

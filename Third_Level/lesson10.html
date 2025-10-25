@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الدرس 10: الجمل الشرطية في C++</title>
+  <link rel="stylesheet" href="/style2.css" />
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="prev"><a class="chapter" href="/Third_Level/lesson9.html">&laquo;عودة</a>
+    <a class="chapter" href="/Third_Level/lesson11.html">التالي&raquo;</a></div>
+  <header>
+    <h1>⚡ الدرس 10: الجمل الشرطية (if, else if, else)</h1>
+    <p>اتخذ قرارات ذكية في برنامجك باستخدام الجمل الشرطية.</p>
+  </header>
+
+  <section>
+    <h2>🔹 مقدمة</h2>
+    <p>
+      في البرامج، غالبًا نحتاج لتنفيذ جزء معين من الكود فقط إذا تحقق شرط محدد.  
+      لغة C++ توفر لنا الجمل الشرطية <code>if</code> و <code>else if</code> و <code>else</code> لتحقيق ذلك.
+    </p>
+  </section>
+
+  <section>
+    <h2>🔹 تركيب الجملة الشرطية</h2>
+    <pre><code>if (condition) {
+    // الكود ينفذ إذا تحقق الشرط
+} else if (another_condition) {
+    // ينفذ هذا الكود إذا تحقق الشرط الثاني
+} else {
+    // ينفذ هذا الكود إذا لم تتحقق أي من الشروط السابقة
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 مثال 1: تحديد العمر</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age;
+    cout &lt;&lt; "أدخل عمرك: ";
+    cin &gt;&gt; age;
+
+    if(age &lt; 13)
+        cout &lt;&lt; "أنت طفل." &lt;&lt; endl;
+    else if(age &lt; 20)
+        cout &lt;&lt; "أنت مراهق." &lt;&lt; endl;
+    else
+        cout &lt;&lt; "أنت بالغ." &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+    <h3>🔸 الناتج:</h3>
+    <pre><code>أدخل عمرك: 15
+أنت مراهق.</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 مثال 2: تقييم العلامة</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int grade;
+    cout &lt;&lt; "أدخل علامتك: ";
+    cin &gt;&gt; grade;
+
+    if(grade &gt;= 90)
+        cout &lt;&lt; "ممتاز" &lt;&lt; endl;
+    else if(grade &gt;= 75)
+        cout &lt;&lt; "جيد جدًا" &lt;&lt; endl;
+    else if(grade &gt;= 60)
+        cout &lt;&lt; "جيد" &lt;&lt; endl;
+    else
+        cout &lt;&lt; "راسب" &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+    <h3>🔸 مثال على الناتج:</h3>
+    <pre><code>أدخل علامتك: 82
+جيد جدًا</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 ملاحظات مهمة</h2>
+    <ul>
+      <li>الجملة <code>if</code> تتحقق أولاً، وإذا كان الشرط صحيحًا، يتخطى باقي الشروط.</li>
+      <li>يمكن أن يكون لدينا عدة <code>else if</code> للتحقق من حالات مختلفة.</li>
+      <li>الجملة <code>else</code> اختيارية وتنفذ إذا لم تتحقق أي من الشروط السابقة.</li>
+      <li>الشرط يمكن أن يكون أي تعبير منطقي أو مقارنة.</li>
+    </ul>
+  </section>
+<footer>
+<div id="footerB"></div>
+</footer>
+  
+  
+  <script>// تحميل الترويسة من الملف الخارجي وإدراجها
+  fetch('/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav').innerHTML = data;
+    });
+      fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerB').innerHTML = data;
+    });</script>
+    <script src="/script.js"></script>
+</body>
+</html>

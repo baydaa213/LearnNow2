@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الدرس 9: Postfix و Prefix في C++</title>
+  <link rel="stylesheet" href="/style2.css" />
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="prev"><a class="chapter" href="/Third_Level/lesson8.html">&laquo;عودة</a>
+    <a class="chapter" href="/Third_Level/lesson10.html">التالي&raquo;</a></div>
+  <header>
+    <h1>🔢 الدرس 9: Postfix و Prefix (++ و--)</h1>
+    <p>تعلّم كيف تزيد أو تنقص قيمة المتغير بطريقة ذكية وسهلة.</p>
+  </header>
+
+  <section>
+    <h2>🔹 مقدمة</h2>
+    <p>
+      في كثير من البرامج نحتاج زيادة أو نقصان قيمة المتغير بمقدار واحد.  
+      C++ توفر لنا عاملين لذلك: <strong>الزيادة/النقصان قبل المتغير (Prefix)</strong>  
+      و <strong>الزيادة/النقصان بعد المتغير (Postfix)</strong>.  
+      كل واحد له سلوك مختلف عند التنفيذ.
+    </p>
+  </section>
+
+  <section>
+    <h2>🔹 الفرق بين Prefix و Postfix</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>الطريقة</th>
+          <th>الرمز</th>
+          <th>الوصف</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Prefix</td>
+          <td><code>++x</code> / <code>--x</code></td>
+          <td>تزيد/تنقص القيمة أولاً، ثم تُستخدم في التعبير.</td>
+        </tr>
+        <tr>
+          <td>Postfix</td>
+          <td><code>x++</code> / <code>x--</code></td>
+          <td>تُستخدم القيمة أولاً في التعبير، ثم تتم الزيادة/النقصان.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 مثال 1: الفرق بين Prefix و Postfix</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x = 5;
+
+    cout &lt;&lt; "x = " &lt;&lt; x &lt;&lt; endl;
+
+    cout &lt;&lt; "Postfix x++ = " &lt;&lt; x++ &lt;&lt; endl;
+    cout &lt;&lt; "بعد Postfix x = " &lt;&lt; x &lt;&lt; endl;
+
+    cout &lt;&lt; "Prefix ++x = " &lt;&lt; ++x &lt;&lt; endl;
+    cout &lt;&lt; "بعد Prefix x = " &lt;&lt; x &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+    <h3>🔸 الناتج عند التشغيل:</h3>
+    <pre><code>x = 5
+Postfix x++ = 5
+بعد Postfix x = 6
+Prefix ++x = 7
+بعد Prefix x = 7</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 مثال 2: استخدام ++ و-- في الحلقات</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "الأعداد من 1 إلى 5: ";
+    for(int i = 1; i &lt;= 5; i++) {
+        cout &lt;&lt; i &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+    return 0;
+}</code></pre>
+
+    <h3>🔸 الناتج:</h3>
+    <pre><code>الأعداد من 1 إلى 5: 1 2 3 4 5</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 ملاحظات مهمة</h2>
+    <ul>
+      <li>Postfix يُستخدم عادة عندما تحتاج قيمة المتغير قبل التغيير.</li>
+      <li>Prefix يُستخدم عندما تحتاج التغيير يحدث قبل استخدام القيمة.</li>
+      <li>تُستخدم هذه العوامل كثيرًا في الحلقات التكرارية أو عند العدادات.</li>
+    </ul>
+  </section>
+<footer>
+<div id="footerB"></div>
+</footer>
+  <script>// تحميل الترويسة من الملف الخارجي وإدراجها
+  fetch('/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav').innerHTML = data;
+    });
+      fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerB').innerHTML = data;
+    });</script>
+    <script src="/script.js"></script>
+</body>
+</html>

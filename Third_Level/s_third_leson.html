@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style-code.css?v=3">
+  <title>الدرس الثالث</title>
+</head>
+<body>
+  <div id="nav"></div>
+  <div class="prev" ><a class="chapter" href="/Third_Level/s_second_lesson.html">&laquo;عودة</a>
+    <a class="chapter" href="/Third_Level/lesson4.html">التالي &raquo;</a></div>
+  
+<p class="start">طباعة سطر جديد:</p>
+لطباعة جملتين أو أكثر كل جملة بسطر منفرد نستخدم إحدى الطرقتين التاليتين :
+<br>
+<li>1-endl</li>
+<li>2-"n\"</li>
+<hr>
+<p style="color: rgb(223, 161, 54); font-weight: bolder;">1-endl :</p>
+<div class="code-box codes">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  cout&lt;&lt;"hello student"&lt;&lt;endl&lt;&lt;" you are in LearnNow";
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box codes">
+<pre>
+  hello student
+  you are in LearnNow
+</pre>
+</div>
+<hr>
+ويمكن كتابتها بعدة طرق:
+<div class="code-box codes">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  cout&lt;&lt;"hello student";
+  cout&lt;&lt;endl&lt;&lt;" you are in LearnNow";
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box codes">
+<pre>
+  hello student
+  you are in LearnNow
+</pre>
+</div>
+<hr>
+<div class="code-box codes">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  cout&lt;&lt;"hello student";
+  cout&lt;&lt;endl;
+  cout&lt;&lt;" you are in LearnNow";
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box codes">
+<pre>
+  hello student
+  you are in LearnNow
+</pre>
+</div>
+<hr>
+<p style="color: rgb(223, 161, 54); font-weight: bolder;">2-"n\" :  </p>
+ويجب أن تكون داخل تنصيصتين " " أو تنصيصة ' '.
+<div class="code-box codes">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  cout&lt;&lt;"hello student\n"&lt;&lt;" you are in LearnNow";
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box codes">
+<pre>
+  hello student
+  you are in LearnNow
+</pre>
+</div>
+<hr>
+<div class="code-box codes">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  cout&lt;&lt;"hello student"&lt;&lt;'\n'&lt;&lt;" you are in LearnNow";
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box codes">
+<pre>
+  hello student
+  you are in LearnNow
+</pre>
+</div>
+<hr>
+و بنفس الطريقة السابقة يمكن كتابتها بعدة طرق:
+<div class="code-box codes">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  cout&lt;&lt;"hello student";
+  cout&lt;&lt;"\n"&lt;&lt;" you are in LearnNow";
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box codes">
+<pre>
+  hello student
+  you are in LearnNow
+</pre>
+</div>
+<hr>
+<div class="code-box codes">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  cout&lt;&lt;"hello student";
+  cout&lt;&lt;"\n";
+  cout&lt;&lt;" you are in LearnNow";
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box codes">
+<pre>
+  hello student
+  you are in LearnNow
+</pre>
+</div>
+<hr>
+ويمكن طباعة أكثر من سطر
+<div class="code-box codes">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  cout&lt;&lt;"hello student";
+  cout&lt;&lt;"\n\n\n"&lt;&lt;" you are in LearnNow";
+  cout&lt;&lt;endl&lt;&lt;endl&lt;&lt;endl&lt;&lt;" welcome";
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box codes">
+<pre>
+  hello student
+
+
+  you are in LearnNow
+
+
+  welcome
+</pre>
+</div>
+<hr>
+<P style="border: solid salmon 3px;color: rgb(205, 81, 59);padding: 5px;margin: 10px;">لا تنسى الممارسة والتطبيق العملي لأنك لن تفهم إذا لم تطبق ماتعلمته  ولا يغرك الفهم اللحظي وأنت تقرأ فكله سيتبخر بمرور الوقت إذا لن تدعمه عملياً .</P>
+
+</p>
+
+
+
+<!-- الدرس الثالث -->
+ <!-- شرح التعليق -->
+<p class="start">التعليقات (Comments):</p>
+<p>هو نص يتم إضافته إلى الشيفرة المصدرية (الكود) لشرحها أو توضيحها، ويتجاهله المترجم أو المفسر تماماً عند تنفيذ البرنامج. تُستخدم التعليقات لتسهيل فهم الكود على المبرمجين، سواءً لأنفسهم عند العودة إليه لاحقاً أو لغيرهم الذين يعملون معه. وهي لا تظهر في المنتج النهائي ولا تؤثر على أداء البرنامج. </p>
+<br>يتم تعليق سطر بكتابة شرطتين  // أو تعليق أكثر من سطر باستخدام /* */ حيث أن المترجم لايقرأ مايكتب بعد // ولا مابين  /* */   
+<!-- مثال للتعليق -->
+ <div class="code-box codes">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  //بيانات الطالب
+  cout&lt;&lt;"name: mohammed";
+  cout&lt;&lt;"\n";
+  cout&lt;&lt;"age: 23";
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box codes">
+<pre>
+  name: mohammed
+  age: 23
+</pre>
+</div>
+<hr>
+<div class="code-box codes">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+/*طباعة بيانات الموظف 
+وبيانات الشركة التي يعمل فيها*/
+  cout&lt;&lt;"name: mohammed";
+  cout&lt;&lt;"\n";
+  cout&lt;&lt;"age: 23\n";
+  cout&lt;&lt;"phone number: 24734832\n";
+  cout&lt;&lt;"salary: 4000\n";
+  cout&lt;&lt;"company: MTN\n";
+  cout&lt;&lt;"location: sana'a\n";
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box codes">
+<pre>
+name: mohammed
+age: 23
+phone number: 24734832
+salary: 4000
+company: MTN
+location: sana'a
+</pre>
+</div>
+<hr>
+<div class="code-box codes">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  //cout&lt;&lt;"commented";
+  cout&lt;&lt;"not commented";
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box codes">
+<pre>
+not commented
+</pre>
+</div>
+<hr>
+<P style="border: solid salmon 3px;color: rgb(205, 81, 59);padding: 5px;margin: 10px;"> لاحظ أن الأسطر المعلقة لاتؤثر على الناتج ولا تظهر في الخرج حتى  وإن كانت تعليمات برمجية.</P>
+<footer>
+  <div id="footerB"></div>
+</footer>
+  <script>// تحميل الترويسة من الملف الخارجي وإدراجها
+    fetch('/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav').innerHTML = data;
+      });
+      
+        fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerB').innerHTML = data;
+    });
+      </script>
+            <script src="/script.js"></script>
+</body>
+</html>

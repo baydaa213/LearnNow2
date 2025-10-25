@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>امتحان أساسيات البرمجة بلغة ++C - المستوى الثالث</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <style>
+    p{
+  border:4px solid rgb(32, 124, 160);
+  border-radius: 20px;
+  padding: 5px 10px;
+  background-color:rgb(208, 215, 221);
+  margin: 5px 0px;
+  width: 100%;
+  color: rgb(23, 87, 112);
+}
+p:hover{
+  padding: 7px 20px;
+  background-color: rgb(195, 206, 223);
+  color: rgb(217, 145, 0);
+  cursor: pointer;
+  font-size: larger;
+}
+    code,.all_ques {
+    direction: ltr;
+    }
+  </style>
+
+  <div id="nav"></div>
+
+  <div id="res" class="start" style="display: none;">
+    <p id="result"></p>
+  </div>
+
+  <div id="quiz">
+
+    <div class="start" id="q1">
+      <h2>ما الوظيفة الأساسية للسطر <b>#include &lt;iostream&gt;</b> في لغة ++C؟</h2>
+      <p onclick="wrong_choice(this)" >تعريف الدالة main.</p>
+      <p onclick="right_choice(this)">تضمين مكتبة الإدخال والإخراج القياسية.</p>
+      <p onclick="wrong_choice(this)">إنهاء البرنامج.</p>
+    </div>
+
+    <div class="start all_ques" id="q2">
+      <h2>ماذا يحدث إذا نسيت كتابة <code>;</code> في نهاية التعليمة؟</h2>
+      <p onclick="wrong_choice(this)">يتم تجاهل السطر.</p>
+      <p onclick="right_choice(this)">يظهر خطأ عند الترجمة.</p>
+      <p onclick="wrong_choice(this)">يتم تنفيذ الكود بدون مشكلة.</p>
+    </div>
+
+    <div class="start all_ques" id="q3">
+      <h2>أي من الأوامر التالية تطبع سطرين منفصلين؟</h2>
+      <p onclick="wrong_choice(this)"><code>cout << "Hi"; cout << "There";</code></p>
+      <p onclick="right_choice(this)"><code>cout << "Hi\nThere";</code></p>
+      <p onclick="wrong_choice(this)"><code>cout << "Hi"; cout << "endl There";</code></p>
+    </div>
+
+    <div class="start all_ques" id="q4">
+      <h2>ما الناتج من الكود التالي؟</h2>
+      <pre>
+<code >int age = 20;
+cout << "Age: " << age;
+age = 21;
+cout << "\nAge: " << age;</code>
+      </pre>
+      <p onclick="wrong_choice(this)">Age: 20</p>
+      <p onclick="right_choice(this)">Age: 20<br>Age: 21</p>
+      <p onclick="wrong_choice(this)">Age: 21</p>
+    </div>
+
+    <div class="start all_ques" id="q5">
+      <h2>ما الغرض من التعليقات في الكود؟</h2>
+      <p onclick="right_choice(this)">لتوضيح الكود دون أن تُنفذ.</p>
+      <p onclick="wrong_choice(this)">لتسريع البرنامج.</p>
+      <p onclick="wrong_choice(this)">تُنفذ أثناء التشغيل.</p>
+    </div>
+
+    <div class="start all_ques" id="q6">
+      <h2>ما الفرق بين <code>endl</code> و <code>\n</code>؟</h2>
+      <p onclick="wrong_choice(this)">لا يوجد فرق.</p>
+      <p onclick="right_choice(this)">\n يُكتب داخل تنصيصتين.</p>
+      <p onclick="wrong_choice(this)">\n يُستخدم في النصوص فقط.</p>
+    </div>
+
+    <div class="start all_ques" id="q7">
+      <h2>أي من الأسماء التالية صالح كاسم متغير؟</h2>
+      <p onclick="wrong_choice(this)">1name</p>
+      <p onclick="right_choice(this)">_age</p>
+      <p onclick="wrong_choice(this)">my name</p>
+    </div>
+
+    <div class="start all_ques" id="q8">
+      <h2>في المثال التالي، ما نوع البيانات الأنسب للمتغير <code>gpa</code>؟</h2>
+      <pre><code> gpa = 3.75;</code></pre>
+      <p onclick="wrong_choice(this)">int</p>
+      <p onclick="wrong_choice(this)">char</p>
+      <p onclick="right_choice(this)">double</p>
+    </div>
+
+    <div class="start all_ques" id="q9">
+      <h2>ما ناتج تنفيذ الكود التالي؟</h2>
+      <pre><code>bool success = true;
+cout << success;</code></pre>
+      <p onclick="wrong_choice(this)">true</p>
+      <p onclick="right_choice(this)">1</p>
+      <p onclick="wrong_choice(this)">false</p>
+    </div>
+
+    <div class="start all_ques" id="q10">
+      <h2>لماذا يُعتبر استخدام المتغيرات أفضل من كتابة القيم مباشرة في الكود؟</h2>
+      <p onclick="right_choice(this)">يسهل تغيير القيم لاحقًا دون تعديل كل الأسطر.</p>
+      <p onclick="wrong_choice(this)">يجعل الكود أطول.</p>
+      <p onclick="wrong_choice(this)">يزيد سرعة التنفيذ.</p>
+    </div>
+
+  </div>
+
+  <div id="goToMain" style="margin-top: 20px; display: none;">
+    <a href="/Quizzes/go_Quiz.html"><button class="btn">عودة للقائمة الرئيسية</button></a>
+  </div>
+
+  <script>
+    fetch('/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav').innerHTML = data;
+      });
+  </script>
+
+  <script src="/script.js"></script>
+</body>
+</html>

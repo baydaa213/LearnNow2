@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إمتحان المستوى الثاني</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <style>
+    p{
+  border:4px solid rgb(32, 124, 160);
+  border-radius: 20px;
+  padding: 5px 10px;
+  background-color:rgb(208, 215, 221);
+  margin: 5px 0px;
+  width: 100%;
+  color: rgb(23, 87, 112);
+}
+p:hover{
+  padding: 7px 20px;
+  background-color: rgb(195, 206, 223);
+  color: rgb(217, 145, 0);
+  cursor: pointer;
+  font-size: larger;
+}
+    code {
+      direction: ltr;
+    }
+  </style>
+  <body>
+    <div id="nav"></div>
+  <div id="res" class="start" style="display: none;"><p id="result"></p></div>
+  <div id="quiz">
+    <div class="start" id="q1">
+      <h2>أي مما يلي يُعتبر وظيفة أساسية للحاسوب؟</h2>
+    <p onclick="wrong_choice(this)">استقبال البيانات فقط.</p>
+    <p onclick="wrong_choice(this)"> تخزين البيانات فقط.</p>
+    <p onclick="right_choice(this)">استقبال ومعالجة البيانات ثم إخراجها أو تخزينها. </p>
+    </div>
+  
+    <div class="start all_ques" id="q2">
+      <h2>الحاسوب يُعرَّف بأنه:</h2>
+    <p onclick="wrong_choice(this)">جهاز كهربائي لتخزين البيانات فقط.</p>
+    <p onclick="wrong_choice(this)"> جهاز إلكتروني يقوم بإدخال البيانات فقط.</p>
+    <p onclick="right_choice(this)">جهاز إلكتروني يعالج البيانات ويخزنها أو يخرجها.</p>
+    </div>
+    <div class="start all_ques" id="q3">
+      <h2>أي من الأجهزة التالية يُعتبر حاسوبًا وفقًا للتعريف (جهاز إلكتروني يستقبل البيانات ويعالجها ويُخرجها أو يخزنها)؟</h2>
+    <p onclick="wrong_choice(this)"> الهاتف المحمول.</p>
+    <p onclick="wrong_choice(this)">اللابتوب.</p>
+    <p onclick="right_choice(this)">جميع ما سبق.</p>
+    </div>
+  
+    <div class="start all_ques" id="q4">
+      <h2>من أمثلة أجهزة الإدخال:</h2>
+    <p onclick="wrong_choice(this)">الطابعة.</p>
+    <p onclick="right_choice(this)">الكاميرا.</p>
+    <p onclick="wrong_choice(this)">السماعة.</p>
+    </div>
+  
+    <div class="start all_ques" id="q5">
+      <h2>في مثال الصراف الآلي، أي عملية تُمثل المعالجة؟</h2>
+    <p onclick="wrong_choice(this)">العميل يدخل البطاقة ويكتب الرقم السري.</p>
+    <p onclick="right_choice(this)">الجهاز يخصم المبلغ من الحساب بعد التحقق من الرصيد.</p>
+    <p onclick="wrong_choice(this)">إخراج المبلغ النقدي.</p>
+    </div>
+  
+    <div class="start all_ques" id="q6">
+      <h2> مكونات الحاسوب تنقسم إلى:</h2>
+    <p onclick="wrong_choice(this)">إدخال وإخراج فقط.</p>
+    <p onclick="right_choice(this)"> أجهزة وبرامج (Hardware & Software).</p>
+    <p onclick="wrong_choice(this)">شاشة ولوحة مفاتيح فقط.</p>
+    </div>
+  
+    <div class="start all_ques" id="q7">
+      <h2>وحدة الحساب والمنطق (ALU) وظيفتها الأساسية:</h2> </h2>
+    <p onclick="right_choice(this)">تنفيذ العمليات الحسابية والمنطقية.</p>
+    <p onclick="wrong_choice(this)">توجيه أوامر الحاسوب.</p>
+    <p onclick="wrong_choice(this)">كل من الأول والثاني صحيح</p>
+    </div>
+  
+    <div class="start all_ques" id="q8">
+      <h2>ذاكرة RAM تُسمى بالذاكرة المتطايرة لأنها:</h2>
+    <p onclick="wrong_choice(this)">تخزن البيانات بشكل دائم.</p>
+    <p onclick="wrong_choice(this)"> لا تسمح بكتابة بيانات جديدة.</p>
+    <p onclick="right_choice(this)">تفقد محتواها عند انقطاع الكهرباء.</p>
+    </div>
+  
+    <div class="start all_ques" id="q9">
+      <h2>تميز بوجود نوافذ وايقونات</h2>
+    <p onclick="right_choice(this)">Windows</p>
+    <p onclick="wrong_choice(this)">Dos</p>
+    <p onclick="wrong_choice(this)">كلا الإجابتين غير صحيحة</p>
+    </div>
+  
+    <div class="start all_ques" id="q10">
+      <h2>أي من وحدات التخزين التالية تُعتبر ثانوية؟</h2>
+    <p onclick="wrong_choice(this)">RAM</p>
+    <p onclick="wrong_choice(this)">ROM</p>
+    <p onclick="right_choice(this)">القرص الصلب (HDD/SSD)</p>
+    </div>
+  
+  </div>
+  <div id="goToMain" style="margin-top: 20px;display: none;">
+      <a href="/Quizzes/go_Quiz.html" ><button class="btn">عودة للقائمة الرئيسية</button></a>
+</div>
+    <script>
+      // تحميل الترويسة من الملف الخارجي وإدراجها
+       fetch('/navbar.html')
+         .then(response => response.text())
+         .then(data => {
+           document.getElementById('nav').innerHTML = data;
+         });</script>
+         <script src="/script.js"></script>
+  </body>
+  </html>
+</body>
+</html>

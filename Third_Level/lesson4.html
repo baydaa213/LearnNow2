@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>الدرس الرابع</title>
+</head>
+<style>
+  code ,.code-box{
+    direction: ltr;
+
+  }
+</style>
+<body>
+  <div id="nav"></div>
+  <div class="prev" ><a class="chapter" href="/Third_Level/s_third_leson.html">&laquo;عودة</a>
+    <a class="chapter" href="/breakC.html">التالي &raquo;</a></div>
+  
+<!-- المتغيرات -->
+ <p class="start">المتغيرات (variable)</p>
+ هي مساحات في الذاكرة تُستخدم لتخزين البيانات التي يمكن أن تتغير قيمتها أثناء تشغيل البرنامج. كل متغير له اسم ونوع بيانات محددين، وتُستخدم المتغيرات لتخزين معلومات مثل الأرقام والنصوص والتواريخ وغيرها<div class="br"></div>
+ <p class="start">طريقة انشاء متغير </p>
+ 
+  <p align="center" style="margin-top: 30px;">
+;<b style="color: red;">data_type </b> <b style="color: rgb(101, 230, 101);">varible_name</b>= <b style="color: gray;">value</b>
+  </p>
+    <p class="start">أنواع المتغيرات أو البيانات (data type):</p>
+ <ul style="color: chocolate;">
+  <li>int: تستخدم لتخزين الاعداد الصحيحة <br>مثل: 1,2,3...</li>
+  <li>flout: تخزن الاعداد العشرية <br>مثل : 2.3 , 0.5 ,5.6</li>
+  <li>double: تخزن القيم العشرية أيضًا لكنها قادرة على استيعاب أعداد أكثر بعد الفاصلة العشرية حيث أن float لا تستوعب إلا 7 أرقام فقط بعد الفاصلة العشرية!</li>
+  <li>string: تخزن النصوص كالاسماء والجمل والفقرات</li>
+  <li>char: تستخدم لتخزين الحروف <br>مثلاً: a,b,c</li>
+  <li>boolean: وتخزن قيمتين فقط وهما : true أو false</li>
+</ul>
+<p class="start">قواعد تسمية المتغيرات:</p>
+يمكنك أن تسمي المتغير الذي ستستخدمه في برنامجك أي اسم تريد و الأفضل أن يدل الاسم على ماسيخزنه المتغير لكن عليك ان تلتزم بعدة قواعد وهي:
+  <ul>
+    <li> يجب أن يكون الاسم باللغة الإنجليزية   , ...</li>
+    <li>أن يبدأ الاسم بحرف أو شرطة سفلية ( _ ) ولايبدأبرقم:<p style="color: red;">اسم  , متغير1  , 1x , 23name...</p></li>
+    <li>عدم إمكانية استخدام المسافات أو الأحرف الخاصة أو الكلمات المحجوزة: <p style="color: red;">my name , my$name$ , cout , int...</p></li>
+    <li>ويسمح باستعمال الأحرف (الكبيرة والصغيرة) والأرقام والشرطة السفلية فقط <p style="color: rgb(68, 240, 68);">x , y , a , name , first_var , var2 , name2</p></li>
+  </ul>
+</p>
+<p class="start">مثال على متغير:</p>
+<img src="/photos/ex1.png" alt="example">
+<p class="start">أمثلة</p>
+ برنامج يقوم بطباعة الرقم 2 .
+<div class="code-box">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  int x=2
+  cout&lt;&lt;x;
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box">
+<pre>
+2
+</pre>
+</div>
+<hr>
+<div class="code-box">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  int age=23;
+  cout&lt;&lt;"age: "&lt;&lt;age;
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box">
+<pre>
+age: 23
+</pre>
+</div>
+<hr>
+<div class="code-box">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  int age=23;
+  cout&lt;&lt;"age: "&lt;&lt;age&lt;&lt;endl;
+  age=24;
+  cout&lt;&lt;"age: "&lt;&lt;age;
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box">
+<pre>
+age: 23
+age: 24
+</pre>
+</div>
+<hr>
+<div class="code-box">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  int y1=20,y2=25;
+  cout&lt;&lt;y1;
+  cout&lt;&lt;y2;
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box">
+<pre>
+2025
+</pre>
+</div>
+<hr>
+<div class="code-box">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  string name="Ali";
+  cout&lt;&lt;name&lt;&lt;" is programmer\n";
+  cout&lt;&lt;name&lt;&lt;" leaves in yemen\n";
+  cout&lt;&lt;"the best programmer  is "&lt;&lt;name&lt;&lt;endl;
+  cout&lt;&lt;"where is "&lt;&lt;name&lt;&lt;" now?";
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box">
+<pre>
+Ali is programmer
+Ali leaves in yemen
+the best programmer  is Ali
+where is Ali now?
+</pre>
+</div>
+<b class="note">Note:</b>
+<P style="border: solid salmon 3px;color: rgb(205, 81, 59);padding: 5px;margin: 10px;"> لاحظ في المثال السابق انه في حالة عدم استخدام متغير وقمت بكتابة اسم الشخص مباشرة فإانك عندما تريد تغيير الاسم إلى مازن مثلاً فعليك الذهاب لكل سطر من الكود وتبديل الاسم القديم بالجديد وهذا أمر متعب خاصة إن كان الكود طويل ,لكن عند تخزين الاسم داخل متغير فإنك لن تضطر للذهاب لكل موضع ذكر فيه الاسم بل انك ستكتفي بتغيير قيمة المتغير فقط.  
+ </P>
+ <div class="code-box">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  string name="Mazen";
+  cout&lt;&lt;name&lt;&lt;" is programmer\n";
+  cout&lt;&lt;name&lt;&lt;" leaves in yemen\n";
+  cout&lt;&lt;"the best programmer  is "&lt;&lt;name&lt;&lt;endl;
+  cout&lt;&lt;"where is "&lt;&lt;name&lt;&lt;" now?";
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box">
+<pre>
+Mazen is programmer
+Mazen leaves in yemen
+the best programmer  is Mazen
+where is Mazen now?
+</pre>
+</div>
+<p class="start">أول مشروع لك في  ++C</p>
+<div class="code-box" >
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  //طباعة بيانات الطلاب في مدرسة
+  //المتغيرات التي ستخزن بيانات الطالب
+  int age=21;
+  string name="ahmed";
+  char grade='B';
+  double gpa=3.2;
+  bool success=true;
+  cout&lt;&lt;"your name is: "&lt;&lt;name&lt;&lt;endl;
+  cout&lt;&lt;"your age is : "&lt;&lt;age&lt;&lt;endl;
+  cout&lt;&lt;"your grade is : "&lt;&lt;grade&lt;&lt;endl;
+  cout&lt;&lt;"your gpa is : "&lt;&lt;gpa&lt;&lt;endl;
+  cout&lt;&lt;"success : "&lt;&lt;success;
+    return 0;
+}  </code></pre>
+</div>
+<div class="output-label">Output:</div>
+<div class="output-box">
+<pre>
+your name is: ahmed
+your age is : 21
+your grade is : B
+your gpa is : 3.2
+success : 1
+</pre>
+</div>
+<hr>
+<footer>
+    <div class="footer-bottom">@ 2025 جميع حقوق النشر محفوظة | LearnNow</div>
+</footer>
+  <script>// تحميل الترويسة من الملف الخارجي وإدراجها
+    fetch('/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav').innerHTML = data;
+      });</script>
+            <script src="/script.js"></script>
+</body>
+</html>

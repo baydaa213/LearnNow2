@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الدرس 5: الإدخال cin في C++</title>
+<link rel="stylesheet" href="/style2.css">
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="prev"><a class="chapter" href="/Third_Level/lesson4.html">&laquo;عودة</a>
+    <a class="chapter" href="/Third_Level/lesson6.html">التالي&raquo;</a></div>
+  <header>
+    <h1>🧩 الدرس 5: الإدخال <code>cin</code> في C++</h1>
+    <p>تعلم كيف تجعل برنامجك يتفاعل مع المستخدم.</p>
+  </header>
+
+  <section>
+    <h2>🔹 ما هي <code>cin</code>؟</h2>
+    <p>
+      في البداية، برامجك كانت تعرض نتائج فقط باستخدام <code>cout</code>،  
+      لكن ماذا لو أردت أن يدخل المستخدم بيانات مثل اسمه أو عمره؟  
+      هنا تأتي الدالة <strong><code>cin</code></strong> (وتُنطق: "سي إن")،  
+      وهي اختصار لعبارة <em>Console Input</em> أي "إدخال من الشاشة".
+    </p>
+  </section>
+
+  <section>
+    <h2>🔹 الصيغة الأساسية</h2>
+    <pre><code>cin >> variable;</code></pre>
+    <p>
+      العامل <code>&gt;&gt;</code> يُسمّى <em>عامل الإدخال (extraction operator)</em>  
+      ووظيفته نقل القيمة من لوحة المفاتيح إلى المتغير.
+    </p>
+  </section>
+
+  <section>
+    <h2>🔹 مثال عملي بسيط</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    string name;
+    cout &lt;&lt; "ما اسمك؟ ";
+    cin &gt;&gt; name;
+
+    cout &lt;&lt; "مرحبًا يا " &lt;&lt; name &lt;&lt; "!" &lt;&lt; endl;
+    return 0;
+}</code></pre>
+
+    <h3>🔸 النتيجة عند التشغيل:</h3>
+    <pre><code>ما اسمك؟ Bidaya
+مرحبًا يا Bidaya!</code></pre>
+
+    <p class="note">
+      💡 ملاحظة: <code>cin</code> تقرأ الكلمة الأولى فقط.  
+      إذا كتبتِ مثلاً "Bidaya Ali"، فسيُخزّن فقط "Bidaya".
+    </p>
+  </section>
+
+  <section>
+    <h2>🔹 قراءة أكثر من قيمة</h2>
+    <p>يمكنك إدخال عدة قيم بنفس السطر، مثلاً لإدخال عمر المستخدم وطوله:</p>
+
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age;
+    double height;
+
+    cout &lt;&lt; "أدخل عمرك وطولك (مثلاً: 20 1.65): ";
+    cin &gt;&gt; age &gt;&gt; height;
+
+    cout &lt;&lt; "عمرك " &lt;&lt; age &lt;&lt; " سنة وطولك " &lt;&lt; height &lt;&lt; " متر." &lt;&lt; endl;
+    return 0;
+}</code></pre>
+
+    <h3>🔸 النتيجة:</h3>
+    <pre><code>أدخل عمرك وطولك (مثلاً: 20 1.65): 21 1.70
+عمرك 21 سنة وطولك 1.7 متر.</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 أخطاء شائعة</h2>
+    <ul>
+      <li>لو أدخلت نص بدل رقم، سيحدث خطأ ولن تُقرأ القيمة.</li>
+      <li>للقراءة الكاملة للجمل، استخدم <code>getline()</code> بدل <code>cin</code>.</li>
+    </ul>
+  </section>
+<footer>
+<div id="footerB"></div>
+</footer>
+
+  <script>// تحميل الترويسة من الملف الخارجي وإدراجها
+  fetch('/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav').innerHTML = data;
+    });
+      fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerB').innerHTML = data;
+    });</script>
+    <script src="/script.js"></script>
+</body>
+</html>

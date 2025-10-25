@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+
+  <link rel="stylesheet" href="/fontawesome-free-7.0.1-web/css/all.min.css">
+
+  <style>
+    /* إعدادات عامة */
+    body {
+      margin: 0;
+      font-family: "Cairo", sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    /* النافبار */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #5d64c4;
+      height: 60px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 40px;
+    }
+
+    .navbar li {
+      position: relative;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 22px;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .navbar a:hover {
+      color: #ffd700;
+      transform: translateY(-3px);
+    }
+
+    /* إخفاء النص وإظهاره عند المرور */
+    .navbar b {
+      position: absolute;
+      bottom: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #222;
+      color: #ffd700;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .navbar a:hover b {
+      opacity: 1;
+      bottom: -45px;
+    }
+
+    /* أيقونات */
+    i {
+      font-size: 22px;
+    }
+
+    /* شعار الموقع */
+    .logo {
+      text-align: center;
+      margin-top: 0px;
+      font-size: 26px;
+      letter-spacing: 2px;
+    }
+
+    .logo font {
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li>
+        <a href="/index.html">
+          <img src="/icons/home_clicked.png" alt="" style="width: 30px;height: 30px;">
+          <b>الرئيسية</b>
+        </a>
+      </li>
+      <li>
+        <a href="/Quizzes/go_Quiz.html">
+          <img src="/icons/signature_icon.png" alt="" style="width: 30px;height: 30px;">
+          <b>كويزات</b>
+        </a>
+      </li>
+      <li>
+        <a href="/About/contact.html">
+          <img src="/icons/phone-call.png" alt="" style="width: 30px;height: 30px;">
+          <b>اتصل بنا</b>
+        </a>
+      </li>
+    </ul>
+  </nav>
+          
+
+  <pre class="logo"><font>L</font>EAR<font>NN</font>O<font>W</font></pre>
+
+</body>
+</html>

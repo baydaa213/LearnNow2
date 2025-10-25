@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>first Level</title>
+  <style>
+    .item {
+      color: rgb(223, 161, 54);
+    }
+    .start {
+      margin-bottom: 20px;
+    }
+    .card {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      color: #ddd;
+    }
+    .card img {
+      width: 100%;
+      max-width: 350px;
+      display: block;
+      margin: 10px auto;
+      border-radius: 10px;
+    }
+    .btn {
+      background-color: rgb(223, 161, 54);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #e6b24d;
+    }
+  </style>
+</head>
+<body>
+  <div id="nav"></div>
+  <div class="prev">
+    <a class="chapter" href="/First_Level/f_first_lesson.html">&laquo;عودة</a>
+    <a class="chapter" href="/First_Level/f_third_lesson.html">التالي&raquo;</a>
+  </div>
+
+  <strong class="start">مكونات الحاسوب:</strong>
+  <p>
+    بالطبع أنك إذا سألت شخص عابر عن مكونات الحاسوب فبكل بساطة سيخبرك بأنه يتكون من شاشة، لوحة مفاتيح ، فأرة....إلخ
+    على الأغلب هكذا سيكون جوابه بحكم أنه مبتدئ ، لكن الجواب الصحيح ليس كذلك حتمًا!
+    فإذا أخذت كل هذه الأجهزة (شاشة، لوحة مفاتيح ، فأرة،معالج) ووصلتهم ببعضهم هل ستحصل على حاسوب متكامل يمكنه القيام بأي مهمة ؟
+    بالطبع لا!
+    فهذه الأجهزة بحاجة إلى برامج تتولى إدارتها وإعطائها أوامر للقيام بأعمالها .
+    وبناءً على ذلك فإن مكونات الحاسوب تنقسم إلى:
+  </p>
+
+  <ol>
+    <li><p>مكونات مادية:</p></li>
+    (hardware): وهي كل شيء يمكن لمسه في الحاسوب ويتمثل ب وحدة المعالجة المركزية  CPU  و وحدات الإدخال والإخراج  input/output Devices  ووحدة التخزين memory unit.
+
+    <li><p>مكونات برمجية:</p></li>
+    (Software): وهي البرامج الموجودة على الحاسب وبدونها لن يكون للحاسوب أي فائدة وينقسم إلى البرامج التطبيقية وأنظمة التشغيل.
+  </ol>
+
+  <p class="start">المكونات المادية</p>
+
+  <!-- بطاقة وحدة المعالجة المركزية -->
+  <div class="card">
+    <p>1- وحدة المعالجة المركزية CPU (central processing unit):</p>
+    <img src="/photos/cpu.jpg" alt="صورة توضيحية لوحدة المعالجة المركزية">
+    بمثابة دماغ الحاسب فهي التي تنفذ كل العمليات التي تُقام على البيانات المدخلة وينقسم إلى:
+    <ul>
+      <li class="item">وحدة الحساب والمنطق ALU (Arithmetic Logical Unit):</li>
+    وتقوم بتنفيذ العمليات الحسابية كالجمع والطرح ....إلخ.
+    
+      <li class="item">وحدة التحكم CU (control unit):</li>
+      وتقوم بتوجيه الحاسوب ماذا يفعل خطوة بخطوة.
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- بطاقة وحدة التخزين -->
+  <div class="card">
+    <p>2- وحدة التخزين Memory unit:</p>
+    <ul>
+      <li class="item">وحدات تخزين أساسية:</li>
+      وتسمى أساسية لأنه لايعمل الحاسوب إلا بها وتنقسم إلى:
+      <br>
+      RAM (Random Access Memory): 
+      و تسمى بالمتطايرة لأنها تخزن البيانات مؤقتًا أثناء معالجتها وفور إنقطاع التيار أو إطفاء الحاسب فإنها تفقد بياناتها.
+        <img src="/photos/Ram.jpg" alt="صورة توضيحية لوحدة التخزين">
+      <br>
+      ROM (Read Only Memory): 
+      وتسمى ذاكرة القراءة فقط لأنه لايمكن حفظ بيانات جديدة داخلها أو حذف بيانات منها  ووظيفتها تخزين بيانات خاصة بالشركة المصنعة للجهاز مثل شعار الشركة واسمها وبعض المعلومات الأخرى الخاصة بالشركة.
+        <img src="/photos/Rom.jpg" alt="صورة توضيحية لوحدة التخزين">
+      <li class="item">وحدات تخزين ثانوية:</li>
+      تستخدم لتخزين المعلومات بعد معالجتها والإحتفاظ بها بشكل دائم. ومن أنواعها:
+  <ul>
+      <li>الأقراص الصلبة (HDD)</li>
+    <li>محركات أقراص الحالة الصلبة (SSD)</li>
+    <li>الأقراص الضوئية (مثل CD وDVD)</li>
+    <li>الأقراص المرنة، والذاكرة الفلاشية (USB)</li>
+  </ul>
+    تتميز هذه الوحدات بسعة تخزين كبيرة ولكن سرعتها أقل من الذاكرة الرئيسية (RAM). 
+      <img src="/photos/memory.jpg" alt="صورة توضيحية لوحدة التخزين">
+<hr>
+      <p>3-وحدات الادخال(input devices):</p>
+      هي أجهزة تقوم بإدخال البيانات والأوامر إلى الكمبيوتر، ومن أمثلتها:  لوحةالمفاتيح، الفأرة، الماسح الضوئي، الكاميرا والميكروفون. تسمح هذه الوحدات للمستخدمين بالتفاعل مع الكمبيوتر عن طريق إدخال النصوص والأرقام والتعليمات والأصوات والصور لمعالجتها وتخزينها أو إخراجها لاحقًا. 
+    <p>4-وحدات الاخراج(output devices):</p>
+    هي أجهزة تقوم بعرض أو إخراج البيانات والمعلومات التي تمت معالجتها بواسطة الكمبيوتر للمستخدم. ومن أمثلتها : الشاشة لعرض البيانات المرئية، والطابعة لإنتاج نسخ مطبوعة، والسماعات لإخراج الصوت، وأجهزة العرض لإسقاط الصور على شاشة أكبر
+      <img src="/photos/i_o_d.png" alt="وحدات الادخال و الاخراج">
+    </ul>
+  </div>
+
+
+<footer>
+  <div id="footerB"></div>
+</footer>
+  <script>
+    // تحميل الترويسة من الملف الخارجي وإدراجها
+    fetch('/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav').innerHTML = data;
+      });
+      fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerB').innerHTML = data;
+    });
+  </script>
+  <script src="/script.js"></script>
+</body>
+</html>

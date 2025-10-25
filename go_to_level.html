@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Page</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .btn{
+    width: 250px;
+    font-size: x-large;
+    line-height: 27px;
+    }
+    a{
+      margin: 10px;
+      height:90px;
+      padding: 15px;
+    }
+  
+  </style>
+</head>
+<body>
+  <div id="nav"></div>
+  <div class="start">
+<a href="/First_Level/f_first_lesson.html"><button class="btn">first Level <br>"مقدمة حاسوب" </button></a>
+<a href="/Second_Level/b-first-lesson.html"><button class="btn">second Level  <br> "مقدمة برمجة" </button></a>
+<a href="/Third_Level/s_first_lesson.html"><button class="btn">third Level <br> "أساسيات البرمجة بلغة  <b style="font-size: 22px;">C++</b>" </button></a>  
+</div>
+<footer>
+  <div id="footerB"></div>
+</footer>
+<script>
+  // تحميل الترويسة من الملف الخارجي وإدراجها
+   fetch('/navbar.html')
+     .then(response => response.text())
+     .then(data => {
+       document.getElementById('nav').innerHTML = data;
+     });
+     fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerB').innerHTML = data;
+    });</script>
+     <script src="/script.js"></script>
+</body>
+</html>

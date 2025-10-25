@@ -1,0 +1,95 @@
+/* 🌙 VS Code-Like Dark Style */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+.code-box {
+  background: #1e1e1e;
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: "JetBrains Mono", monospace;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  margin: 12px 0;
+  max-width: 600px;
+  position: relative;
+  direction: ltr;
+}
+
+/* 🔹 رأس الملف */
+.code-header {
+  background: #252526;
+  color: #9cdcfe;
+  padding: 4px 10px;
+  font-size: 11.5px;
+  border-bottom: 1px solid #333;
+  text-align: right;
+  font-weight: 500;
+}
+
+/* 🔹 المساحة الداخلية */
+.code-box pre {
+  margin: 0 !important;
+  padding: 3px 10px !important;
+  overflow-x: auto;
+  font-size: 28px;
+  line-height: 1.35;
+  direction: ltr;
+  text-align: left;
+  background: #1e1e1e;
+  color: #a15252;
+}
+
+/* 🧩 تنظيف إضافي */
+pre[class*="language-"],
+code[class*="language-"] {
+  background: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+  color: inherit !important;
+}
+
+/* 📋 زر النسخ */
+.copy-btn {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  background: #333;
+  color: #ccc;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 11px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.code-box:hover .copy-btn {
+  opacity: 1;
+}
+
+.copy-btn:hover {
+  background: #444;
+  color: #fff;
+}
+
+.output-box {
+  font-family: "JetBrains Mono", monospace;
+  background: #111;
+  color: #9efb8f;
+  padding: 6px 12px;
+  border-left: 4px solid #4caf50;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 8px 0;
+  direction: ltr;
+  font-size: large ;
+}
+.output-label {
+  font-size: 12px;
+  color: #4caf50;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الدرس 11: المقارنة في C++</title>
+  <link rel="stylesheet" href="/style2.css" />
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="prev"><a class="chapter" href="/Third_Level/lesson10.html">&laquo;عودة</a>
+    <a class="chapter" href="/Third_Level/lessonF.html">التالي&raquo;</a></div>
+  <header>
+    <h1>🔍 الدرس 11: المقارنة (Comparison Operators)</h1>
+    <p>تعلم كيف تقارن بين القيم لاتخاذ القرارات الصحيحة في برامجك.</p>
+  </header>
+
+  <section>
+    <h2>🔹 مقدمة</h2>
+    <p>
+      في معظم البرامج، نحتاج لمقارنة القيم، مثل:  
+      "هل عمر المستخدم أكبر من 18؟" أو "هل الرصيد يكفي؟"  
+      لغة C++ توفر مجموعة من عوامل المقارنة لتسهيل هذه العمليات.
+    </p>
+  </section>
+
+  <section>
+    <h2>🔹 عوامل المقارنة</h2>
+    <table>
+      <thead>
+        <tr><th>العامل</th><th>الوصف</th><th>مثال</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>==</code></td><td>يساوي</td><td><code>x == y</code></td></tr>
+        <tr><td><code>!=</code></td><td>لا يساوي</td><td><code>x != y</code></td></tr>
+        <tr><td><code>&gt;</code></td><td>أكبر من</td><td><code>x &gt; y</code></td></tr>
+        <tr><td><code>&lt;</code></td><td>أصغر من</td><td><code>x &lt; y</code></td></tr>
+        <tr><td><code>&gt;=</code></td><td>أكبر أو يساوي</td><td><code>x &gt;= y</code></td></tr>
+        <tr><td><code>&lt;=</code></td><td>أصغر أو يساوي</td><td><code>x &lt;= y</code></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 مثال 1: مقارنة بسيطة</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a = 10, b = 20;
+
+    if(a &lt; b)
+        cout &lt;&lt; "a أصغر من b" &lt;&lt; endl;
+
+    if(a != b)
+        cout &lt;&lt; "a لا يساوي b" &lt;&lt; endl;
+
+    if(b &gt;= 20)
+        cout &lt;&lt; "b أكبر أو يساوي 20" &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+    <h3>🔸 الناتج:</h3>
+    <pre><code>a أصغر من b
+a لا يساوي b
+b أكبر أو يساوي 20</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 مثال 2: مقارنة أعمار المستخدمين</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age;
+    cout &lt;&lt; "أدخل عمرك: ";
+    cin &gt;&gt; age;
+
+    if(age &gt;= 18)
+        cout &lt;&lt; "يمكنك التسجيل في الموقع." &lt;&lt; endl;
+    else
+        cout &lt;&lt; "لا يمكنك التسجيل، يجب أن يكون عمرك 18 أو أكثر." &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+    <h3>🔸 مثال على الناتج:</h3>
+    <pre><code>أدخل عمرك: 16
+لا يمكنك التسجيل، يجب أن يكون عمرك 18 أو أكثر.</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 ملاحظات مهمة</h2>
+    <ul>
+      <li>عامل <code>==</code> مختلف عن <code>=</code>؛ الأول للمقارنة، الثاني للتعيين.</li>
+      <li>نتيجة كل مقارنة تكون <code>true</code> (صحيح) أو <code>false</code> (خطأ).</li>
+      <li>يمكن دمج عوامل المقارنة مع العمليات المنطقية <code>&amp;&amp;</code> و <code>||</code> لاتخاذ قرارات مركبة.</li>
+    </ul>
+  </section>
+
+<footer>
+<div id="footerB"></div>
+</footer>
+  
+  <script>// تحميل الترويسة من الملف الخارجي وإدراجها
+  fetch('/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav').innerHTML = data;
+    });
+      fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerB').innerHTML = data;
+    });
+    </script>
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الدرس الثاني</title>
+  <link rel="stylesheet" href="/style.css" type="text/css" media="all" />
+  <script src="script.js"></script>
+  <style>
+    h3{
+      margin: 0px;
+      border: solid salmon 3px;
+      background-color: aliceblue;
+    }
+    .note{
+      border: solid rgb(205, 2, 2) 5px;
+      padding: 4px;
+      border-radius: 10px;
+      font-size: larger;
+    }
+    *{
+      word-spacing: 5px;
+    }
+  </style>
+<link rel="stylesheet" href="/style-code.css?v=3">
+<!-- استيراد Prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+</head>
+<body>
+  <div id="nav"></div>
+  <div class="prev"><a class="chapter" href="/Third_Level/s_first_lesson.html">&laquo;عودة</a>
+    <a class="chapter" href="/Third_Level/s_third_leson.html">التالي&raquo;</a></div>
+<p>
+  <p class="start">هيكلية لغة C++:</p>
+  هي تعليمات ثابتة وعليك كتابتها في أي كود لك بلغة c++
+  , ومن ثم يتم كتابة التعليمات في جسم الكود (code body)  وهي الأوامر التي يكتبها المبرمج لتنفيذ مهمة معينة .
+  <img src="/photos/structure.png" alt="">
+  <!-- إضافة تشات -->
+<div style="background-color:#1e1e1e; color:#eee; padding:20px; border-radius:10px; font-family:'Cairo', monospace; line-height:1.9; direction:rtl; text-align:right;">
+  <h3 style="color:#00c3ff; margin-bottom:15px;">شرح مختصر للهيكل الأساسي في C++</h3>
+
+  <p>
+    <code style="color:#00ff99; font-size:16px;direction: ltr;">&lt;include &lt;iostream#</code><br>
+    🔹 هذا السطر يعني "تضمين مكتبة الإدخال والإخراج القياسية" في البرنامج.<br>
+    🔸 نستخدمها لأنها تحتوي على أدوات الطباعة <code>cout</code> وأدوات الإدخال <code>cin</code>.
+  </p>
+
+  <p>
+    <code style="color:#00ff99; font-size:16px;">;using namespace std</code><br>
+    🔹 هذا السطر يعني أننا نستخدم مساحة الأسماء القياسية <code>std</code>.<br>
+    🔸 يفيدنا في كتابة أوامر مثل <code>cout</code> و<code>cin</code> بدون الحاجة لكتابة <code>std::</code> قبلها.
+  </p>
+
+  <p>
+    <code style="color:#00ff99; font-size:16px;">()int main</code><br>
+    🔹 هذا السطر هو تعريف الدالة الرئيسية في البرنامج.<br>
+    🔸 منها يبدأ تنفيذ البرنامج فعليًا، وكل الأوامر داخلها تُنفّذ عند التشغيل.
+  </p>
+
+  <p>
+    <code style="color:#00ff99; font-size:16px;">{ ... }</code><br>
+    🔹 الأقواس تُستخدم لاحتواء جسم الدالة <code>main</code>.<br>
+    🔸 نكتب بداخلها كل الأوامر التي نريد تنفيذها عند تشغيل البرنامج.
+  </p>
+
+  <p>
+    <code style="color:#00ff99; font-size:16px;">;return 0</code><br>
+    🔹 هذا السطر يُعيد قيمة من الدالة <code>main</code> إلى نظام التشغيل.<br>
+    🔸 القيمة <code>0</code> تعني أن البرنامج انتهى بنجاح بدون أخطاء.
+  </p>
+
+  <div style="border-top:1px solid #444; margin-top:20px; padding-top:10px;">
+    💡 <b>باختصار:</b> نُضمّن المكتبة التي نحتاجها، نفعّل أدواتها، نبدأ التنفيذ داخل <code>main()</code>، نكتب أوامرنا، ثم ننهي البرنامج.
+  </div>
+</div>
+
+
+  <b class="note">Note:</b>
+   <P style="border: solid salmon 3px;color: rgb(205, 81, 59);padding: 5px;margin: 10px;">لا ننصح بالتركيز على مصطلحات ومعاني هذه الهيكلية لأنك ستفهمه بكل تأكيد في مراحل متقدمة.</P>
+  <p class="start">تعليمة الطباعة (cout)</p>
+  حسناً جهزنا بيئة العمل وكتبنا الهيكلية وبعد ؟
+  <br>
+نريد أن نرى شيئاً نريد أن نلمس أية استجابة من الكود!
+<br>
+وهنا يأتي دور تعليمة الطباعة &gt;&gt;cout
+والتي من خلالها يمكننا طباعة أي جملة على الناتج أو الoutput.
+<br>
+مثلاً نريد طباعة كلمة hello :
+<div class="code-box">
+  <div class="code-header">main.cpp</div>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+    cout &lt;&lt; "Hello!";
+}  </code></pre>
+</div>
+</div>  <b class="note">Note:</b>
+   <P style="border: solid salmon 3px;color: rgb(205, 81, 59);padding: 5px;margin: 10px;">  لاحظ أنه عند طباعة جملة أو نص يجب أن تكون داخل تنصيصتين  : " " 
+  <br>
+    ويجب أن تضع فاصلة منقوطة نهاية كل تعليمة ;
+  </P>
+<p class="start">أمثلة على جمل الطباعة</p>
+<br>  
+<div class="code-box">
+    <div class="code-header">main.cpp</div>
+    <pre><code class="language-cpp">
+  #include &lt;iostream&gt;
+  using namespace std;
+  int main() {
+      cout &lt;&lt; "Hello, World!";
+      return 0;
+  }  </code></pre>
+  </div>
+  <div class="output-label">Output:</div>
+  <div class="output-box">
+  <pre>
+Hello, World!
+  </pre>
+  </div>
+  <hr>
+  <div class="code-box ">
+    <div class="code-header">main.cpp</div>
+    <pre><code class="language-cpp">
+  #include &lt;iostream&gt;
+  using namespace std;
+  int main() {
+    cout&lt;&lt;"hello student , you are in LearnNow";
+      return 0;
+  }  </code></pre>
+  </div>
+  <div class="output-label">Output:</div>
+  <div class="output-box">
+  <pre>
+hello student , you are in LearnNow
+  </pre>
+  </div>
+  <hr>
+  <div class="code-box ">
+    <div class="code-header">main.cpp</div>
+    <pre><code class="language-cpp">
+  #include &lt;iostream&gt;
+  using namespace std;
+  int main() {
+cout&lt;&lt;"hello student ";
+cout&lt;&lt;"you are in LearnNow";
+    return 0;
+  }  </code></pre>
+  </div>
+  <div class="output-label">Output:</div>
+  <div class="output-box">
+  <pre>
+    hello student you are in LearnNow
+  </pre>
+  </div>
+  <hr>
+  <div class="code-box">
+    <div class="code-header">main.cpp</div>
+    <pre><code class="language-cpp">
+  #include &lt;iostream&gt;
+  using namespace std;
+  int main() {
+    cout&lt;&lt;"you are in LearnNow ";
+    cout&lt;&lt;"hello student";
+    return 0;
+  }  </code></pre>
+  </div>
+  <div class="output-label">Output:</div>
+  <div class="output-box">
+  <pre>
+you are in LearnNow hello student
+  </pre>
+  </div>
+  <hr>
+  <P style="border: solid salmon 3px;color: rgb(205, 81, 59);padding: 5px;margin: 10px;">لاحظ أنه يطبع الجملتين بنفس السطر فالمترجم لا يأبه بالأسطر التي تتركها أنت لذا يجب عليك اخباره عندما تريد النزول لسطر جديد </P>  
+  <footer>
+  <div id="footerB"></div>
+</footer>
+  <script>// تحميل الترويسة من الملف الخارجي وإدراجها
+    fetch('/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav').innerHTML = data;
+      });
+        fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerB').innerHTML = data;
+    });</script>
+      <script src="/script.js"></script>
+</body>
+</html>

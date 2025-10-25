@@ -1,0 +1,346 @@
+body {
+  background-color: black;
+  color: #E3B7F0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  direction: rtl;
+  line-height: 1.8;
+  margin: 0px;
+  padding: 0px;
+  font-size:25px ;
+padding: 0px 10px;
+}
+/*إزالة المسافات من الصفحات*/
+p,h1,div{
+margin: 0;
+padding: 0;
+}
+/* nav par list*/
+.nav_list{
+  display: inline;
+  float: left;
+  margin: 20px;
+  direction: rtl;
+}
+
+
+/*infirst page "learning programming "*/
+.title {
+  
+  margin-top: 50px;
+  margin: 30px 20px;
+/*  text-align: center;*/
+  color: #D07041;
+  text-shadow: 2px 2px 2px #D07041;
+}
+
+/*all image in site*/
+img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.img1{
+  width: 500px;
+  height: 250px;
+}
+
+/*all head of paragraph in site */
+.start {
+  margin-top: 50px;
+  padding: 5px 20px;
+  
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  
+  text-align: center;
+  border: 5px #32A484 solid;
+  border-radius: 10px;
+  font-size: 28px;
+  /* text-shadow: 2px 2px 2px #D07041; */
+  box-shadow: 2px 2px 3px 5px #90D9C5;
+ transition: 1s;
+}
+
+/*all paragraph*/
+p {
+  background-image: url("/my site/photos/space.jpg");
+  color: #B7BCF0;
+  font-size: 32px;
+  cursor: context-menu;
+}
+
+/* first div in second page "welcome to you in our site"*/
+#welcome {
+  border: 5px blue solid;
+  border-radius: 20px;
+  background-image: url("photos/explain.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: #664E19;
+  font-size: 40px;
+}
+
+/*.head {
+  text-align: center;
+  color: skyblue;
+  border: 5px blueviolet solid;
+  border-radius: 10px;
+  
+  padding: 5px 20px;
+}*/
+
+.btn {
+  background-color: #2d2f45;
+  color: #32A484;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(50, 164, 132, 0.3);
+    margin-top: 10px;
+
+}
+
+.btn:hover {
+  background-color: #32A484;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(50, 164, 132, 0.6);
+  transform: translateY(-3px);
+}
+
+
+.main {
+  color: thistle;
+  
+}
+
+.sales {
+  text-align: center;
+  font-size: 2rem;
+  color: #B7BCF0; 
+  animation: pulse 1s ease-in-out 3;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.scr {
+  color: #B7BCF0;
+  translate: 900px;
+  transition: 1s;
+}
+/* 5 style of navbar*/
+.navbar{
+background-color: rgb(58, 118, 223);
+padding: 10px 0;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 2px 4px rgba(0,0,0, 1);
+margin-bottom: 40px;
+margin: 0px;
+padding: 0px;
+border-bottom-left-radius: 30px;
+border-bottom-right-radius: 30px;
+}
+.navbar ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding:0;
+  
+}
+.navbar ul li{
+margin-left: 20px;
+}
+.navbar ul li a{
+  color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
+  
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: rgb(161, 219, 252) 0.3s ease,border-bottom 0.3s ease;
+  padding-bottom: 5px;
+}
+.navbar ul li a:hover{
+color:rgba(70, 70, 70, 0.666) ;
+border-bottom: 3px solid rgba(70, 70, 70, 0.666);
+font-size:large ;
+line-height: 50px;
+font-weight: 900;
+}
+
+/*tow image in third lesson*/
+.lang{
+  width: 400px;
+  height: 400px;
+}
+.all_ques{
+  display: none;
+transition:2px;
+}
+font{
+  color: #7DA0CA;
+
+}
+.logo{
+  padding: 0px;
+  margin: 0px;
+  direction: ltr;
+color: #C1E8FF; 
+font-weight: bolder;
+font-family: cursive;
+font-size: larger;
+}
+.prev{
+display: flex;
+justify-content: space-between;
+font-family: cursive;
+font-size: 28px;
+}
+.chapter{
+  text-decoration: none;
+  color: #7DA0CA;
+  font-size: 50px;
+  cursor: grab;
+}
+
+
+  /* تنسيق الصورة */
+  .zoomable {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  /* عند تمرير الماوس */
+  .zoomable:hover {
+    opacity: 0.8;
+  }
+
+  /* الخلفية عند التكبير */
+  .fullscreen-overlay {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fullscreen-overlay img {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 10px;
+  }
+
+
+/* تنسيق الرسالة الختامية */
+.course-end-block {
+  background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
+  color: #f5f5f5;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 16px;
+  padding: 30px;
+  margin: 60px auto;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.course-end-block:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.25);
+}
+
+.course-end-title {
+  font-size: 1.8rem;
+  color: #ffd700;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.course-end-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* قائمة النقاط */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 8px 0;
+}
+
+/* الإطار النهائي Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 2px solid #333;
+    color: #bdbdbd;
+    font-size: 0.9rem;
+}
+
+/* روابط */
+a {
+    color: #ffca28;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 0 10px;
+    }
+    header h1 {
+        font-size: 1.6rem;
+    }
+    section h2 {
+        font-size: 1.2rem;
+    }
+  }
+  .codes{
+    font-size: 28px;
+    direction: ltr;
+  }

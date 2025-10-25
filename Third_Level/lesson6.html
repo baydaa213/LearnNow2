@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الدرس 6: العمليات الحسابية في C++</title>
+  <link rel="stylesheet" href="/style2.css" />
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="prev"><a class="chapter" href="/Third_Level/lesson5.html">&laquo;عودة</a>
+    <a class="chapter" href="/Third_Level/lesson7.html">التالي&raquo;</a></div>
+  <header>
+    <h1>🧮 الدرس 6: العمليات الحسابية (Arithmetic Operators)</h1>
+    <p>تعلّم كيف تنفّذ الحسابات في برامجك بلغة C++</p>
+  </header>
+
+  <section>
+    <h2>🔹 مقدمة</h2>
+    <p>
+      في الحياة اليومية نجري عمليات حسابية مثل الجمع والطرح والضرب.  
+      لغة <strong>C++</strong> توفر رموزًا خاصة تُسمّى <em>العوامل الحسابية (Arithmetic Operators)</em>  
+      لتُنفّذ نفس العمليات داخل البرنامج.
+    </p>
+  </section>
+
+  <section>
+    <h2>🔹 العوامل الأساسية في C++</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>العامل</th>
+          <th>العملية</th>
+          <th>مثال</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>+</code></td><td>الجمع (Addition)</td><td><code>a + b</code></td></tr>
+        <tr><td><code>-</code></td><td>الطرح (Subtraction)</td><td><code>a - b</code></td></tr>
+        <tr><td><code>*</code></td><td>الضرب (Multiplication)</td><td><code>a * b</code></td></tr>
+        <tr><td><code>/</code></td><td>القسمة (Division)</td><td><code>a / b</code></td></tr>
+        <tr><td><code>%</code></td><td>الباقي (Modulus)</td><td><code>a % b</code></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 مثال 1: العمليات الأساسية</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a = 10, b = 3;
+
+    cout &lt;&lt; "a + b = " &lt;&lt; a + b &lt;&lt; endl;
+    cout &lt;&lt; "a - b = " &lt;&lt; a - b &lt;&lt; endl;
+    cout &lt;&lt; "a * b = " &lt;&lt; a * b &lt;&lt; endl;
+    cout &lt;&lt; "a / b = " &lt;&lt; a / b &lt;&lt; endl;
+    cout &lt;&lt; "a % b = " &lt;&lt; a % b &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+    <h3>🔸 الناتج:</h3>
+    <pre><code>a + b = 13
+a - b = 7
+a * b = 30
+a / b = 3
+a % b = 1</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 مثال 2: مع القيم المدخلة من المستخدم</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    double num1, num2;
+    cout &lt;&lt; "أدخل رقمين: ";
+    cin &gt;&gt; num1 &gt;&gt; num2;
+
+    cout &lt;&lt; "المجموع = " &lt;&lt; num1 + num2 &lt;&lt; endl;
+    cout &lt;&lt; "الفرق = " &lt;&lt; num1 - num2 &lt;&lt; endl;
+    cout &lt;&lt; "الناتج عند الضرب = " &lt;&lt; num1 * num2 &lt;&lt; endl;
+    cout &lt;&lt; "القسمة = " &lt;&lt; num1 / num2 &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+    <h3>🔸 الناتج:</h3>
+    <pre><code>أدخل رقمين: 12 5
+المجموع = 17
+الفرق = 7
+الناتج عند الضرب = 60
+القسمة = 2.4</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 ملاحظات مهمة</h2>
+    <ul>
+      <li>عند قسمة عددين صحيحين (int) يتم تجاهل الفاصلة العشرية.</li>
+      <li>استخدم <code>double</code> إذا أردت نتائج عشرية دقيقة.</li>
+      <li>العامل <code>%</code> يُستخدم فقط مع الأعداد الصحيحة.</li>
+    </ul>
+  </section>
+<footer>
+<div id="footerB"></div>
+</footer>
+  
+  <script>// تحميل الترويسة من الملف الخارجي وإدراجها
+  fetch('/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav').innerHTML = data;
+    });
+      fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerB').innerHTML = data;
+    });</script>
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الدرس 8: اختصارات العمليات الحسابية في C++</title>
+  <link rel="stylesheet" href="/style2.css" />
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="prev"><a class="chapter" href="/Third_Level/lesson7.html">&laquo;عودة</a>
+    <a class="chapter" href="/Third_Level/lesson9.html">التالي&raquo;</a></div>
+  <header>
+    <h1>🔢 الدرس 8: اختصارات العمليات الحسابية (Compound Assignment Operators)</h1>
+    <p>طريقة أسرع وأوضح لتعديل القيم داخل المتغيرات.</p>
+  </header>
+
+  <section>
+    <h2>🔹 مقدمة</h2>
+    <p>
+      في كثير من البرامج نحتاج نزيد أو ننقص قيمة متغير.  
+      مثلًا: في لعبة، النقاط تزيد مع كل فوز.  
+      بدلاً من كتابة <code>score = score + 10;</code>،  
+      يمكننا استخدام شكل مختصر وأنيق: <code>score += 10;</code>
+    </p>
+  </section>
+
+  <section>
+    <h2>🔹 جدول اختصارات العمليات الحسابية</h2>
+    <table>
+      <thead>
+        <tr><th>العامل</th><th>المعادلة الطويلة</th><th>الاختصار</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>+=</code></td><td><code>x = x + 5</code></td><td><code>x += 5</code></td></tr>
+        <tr><td><code>-=</code></td><td><code>x = x - 2</code></td><td><code>x -= 2</code></td></tr>
+        <tr><td><code>*=</code></td><td><code>x = x * 3</code></td><td><code>x *= 3</code></td></tr>
+        <tr><td><code>/=</code></td><td><code>x = x / 2</code></td><td><code>x /= 2</code></td></tr>
+        <tr><td><code>%=</code></td><td><code>x = x % 4</code></td><td><code>x %= 4</code></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 مثال 1: زيادة النقاط في لعبة 🎮</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int score = 0;
+    cout &lt;&lt; "النقاط الحالية: " &lt;&lt; score &lt;&lt; endl;
+
+    score += 10; // أضف 10 نقاط
+    cout &lt;&lt; "بعد الفوز الأول: " &lt;&lt; score &lt;&lt; endl;
+
+    score += 20; // أضف 20 أخرى
+    cout &lt;&lt; "بعد الفوز الثاني: " &lt;&lt; score &lt;&lt; endl;
+
+    score -= 5;  // خسر 5 نقاط
+    cout &lt;&lt; "بعد الخسارة: " &lt;&lt; score &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+    <h3>🔸 الناتج:</h3>
+    <pre><code>النقاط الحالية: 0
+بعد الفوز الأول: 10
+بعد الفوز الثاني: 30
+بعد الخسارة: 25</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 مثال 2: تطبيق عملي بسيط</h2>
+    <p>برنامج يحسب الراتب بعد الزيادة:</p>
+
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    double salary = 1000;
+    double bonus = 0.10; // 10%
+
+    salary += salary * bonus; // زِد الراتب 10%
+    cout &lt;&lt; "الراتب بعد الزيادة: " &lt;&lt; salary &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+    <h3>🔸 الناتج:</h3>
+    <pre><code>الراتب بعد الزيادة: 1100</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 ملاحظات مهمة</h2>
+    <ul>
+      <li>تساعد هذه الاختصارات في جعل الكود أنظف وأقصر.</li>
+      <li>يمكن استخدامها مع جميع أنواع البيانات الرقمية (<code>int</code>, <code>float</code>, <code>double</code>).</li>
+      <li>تُستخدم كثيرًا داخل الحلقات التكرارية (loops).</li>
+    </ul>
+  </section>
+<footer>
+<div id="footerB"></div>
+</footer>
+  <script>// تحميل الترويسة من الملف الخارجي وإدراجها
+  fetch('/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav').innerHTML = data;
+    });
+      fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerB').innerHTML = data;
+    });</script>
+    <script src="/script.js"></script>
+</body>
+</html>

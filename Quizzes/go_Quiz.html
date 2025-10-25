@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Page</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .btn{
+    width: 250px;
+    height: auto;
+    font-size: x-large;
+    margin: 7px;
+    }
+  
+  </style>
+</head>
+<body>
+  <div id="nav"></div>
+  <div class="start">
+<p>
+  تأكد من أنك ذاكرت المستوى الخاص بهذا الامتحان لتحظى بنتيجة مُرضية ,<br>حظ موفق!
+😊
+</p>
+<a href="/Quizzes/quiz1.html"><button class="btn">امتحان المستوى الأول</button></a>  
+
+<a href="/Quizzes/quiz2.html"><button class="btn">امتحان المستوى الثاني</button></a>  
+<a href="/Quizzes/quiz3one.html"><button class="btn"> امتحان المستوى الثالث 1</button></a>  
+<a href="/Quizzes/quiz3two.html"><button class="btn"> امتحان المستوى الثالث 2</button></a>  
+
+</div>
+<footer>
+  <div id="footerB"></div>
+</footer>
+<script>
+  // تحميل الترويسة من الملف الخارجي وإدراجها
+   fetch('/navbar.html')
+     .then(response => response.text())
+     .then(data => {
+       document.getElementById('nav').innerHTML = data;
+     });
+       fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerB').innerHTML = data;
+    });</script>
+     <script src="/script.js"></script>
+</body>
+</html>
