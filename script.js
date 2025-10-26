@@ -67,7 +67,7 @@ else {
   }
   else if(nam_right<=7&&nam_right>5){
     degree.innerHTML='لقد حصلت على '+nam_right+'/10 <br>💙رائع حاول مرة أخرى وستتقدم أكثر';
-    degree.style.color='rgb(255, 210, 9)';
+    degree.style.color='rgba(183, 150, 0, 1)';
   }
   else
   {
